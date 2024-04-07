@@ -26,17 +26,17 @@
 - INSERT INTO Coche (marca, usuario_id) VALUES ('Toyota', 1);
 - INSERT INTO Coche (marca, usuario_id) VALUES ('Ford', 2);
 - INSERT INTO Coche (marca, usuario_id) VALUES ('Chevrolet', 3);
-- INSERT INTO Coche (marca, usuario_id) VALUES ('Nissan', 4);
+ INSERT INTO Coche (marca, usuario_id) VALUES ('Nissan', 4);
 --------------------------------------------------------
 Seleccionar Datos (leer)
 
--- Seleccionar todos los usuarios
+-Seleccionar todos los usuarios
 SELECT * FROM Usuario;
 
--- Seleccionar todos los coches
+-Seleccionar todos los coches
 SELECT * FROM Coche;
 
--- Seleccionar todos los coches con la información del usuario
+-Seleccionar todos los coches con la información del usuario
 SELECT Coche.marca, Usuario.nombre, Usuario.apellido
 FROM Coche
 JOIN Usuario ON Coche.usuario_id = Usuario.usuario_id;
@@ -44,16 +44,17 @@ JOIN Usuario ON Coche.usuario_id = Usuario.usuario_id;
 -----------------------------------------------------
 Actualizar Datos
 
--- Actualizar el apellido de un usuario
+-Actualizar el apellido de un usuario
 UPDATE Usuario SET apellido = 'García' WHERE usuario_id = 1;
 
--- Cambiar la marca de un coche
+-Cambiar la marca de un coche
 UPDATE Coche SET marca = 'Honda' WHERE usuario_id = 1;
+
 -----------------------------------------------------
 Eliminar Datos
 
--- Eliminar un usuario
+-Eliminar un usuario
 DELETE FROM Usuario WHERE usuario_id = 1;
 
--- Eliminar un coche
+-Eliminar un coche
 DELETE FROM Coche WHERE usuario_id = 1;
