@@ -37,6 +37,7 @@ SELECT * FROM Usuario;
 SELECT * FROM Coche;
 
 -Seleccionar todos los coches con la información del usuario
+
 SELECT Coche.marca, Usuario.nombre, Usuario.apellido
 FROM Coche
 JOIN Usuario ON Coche.usuario_id = Usuario.usuario_id;
